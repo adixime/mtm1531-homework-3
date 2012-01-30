@@ -5,15 +5,15 @@ body {
 	margin: 0;
 	padding: 0;
 	font: normal 100%/1.5 sans-serif;
-	background-color: #ccc;
-	color: #555;
+	background-color: #066;
+	color: #036;
 }
 
 form {
 	margin: 1em auto;
 	padding: 2em;
 	width: 34em;
-	background-color: #fff;
+	background-color: #CC0;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.6);
 }
 
