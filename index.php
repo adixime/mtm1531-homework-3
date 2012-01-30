@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(-1);
+ini_set('display_errors', 'on');
+
 $possible_languages = array(
 	'eng' => 'English'
 	, 'fren' => 'French'
@@ -52,10 +55,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Check to see if the form has been
 	
 	if (empty($errors)){
 		$display_thanks = true;
+		$email_message = 'Name: ' . $name . "\r\n" ; // \r\n is a new line in an email
+		$email_message .= 'Email: ' . $email . "\r\n"; //add on to whatever is already there
+		$email_message .= "Message:\r\n" . $message;
+		
+		$headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n";
+		mail('gupt0040@algonquinlive.com', $subject, $message, $email_message, $headers); 
 	}
 	
 	
-	$thankyou = "Thank you for filling the form.";
+	
 	
 }
 
